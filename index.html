@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NENAS Clan | Free Fire</title>
+
+  <!-- Fonts (igual que tu index.html) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <!-- Background ambience -->
+  <div class="bg-ambience" aria-hidden="true">
+    <div class="blob blob-pink"></div>
+    <div class="blob blob-purple"></div>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#inicio" data-scroll>
+        <div class="brand__logo brand__logo--img">
+          <img src="img/IconoFreFire.png" alt="Logo NENAS">
+        </div>
+        <span class="brand__text">NENAS Clan</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navegación principal">
+        <button class="nav__link" data-target="inicio">
+          <img class="nav__iconImg" src="img/home.png" alt="">Inicio
+        </button>
+        <button class="nav__link" data-target="sobre-nosotros">
+          <span class="nav__icon" aria-hidden="true">ℹ️</span> Nosotros
+        </button>
+        <button class="nav__link" data-target="reglas">
+          <span class="nav__icon" aria-hidden="true">🛡️</span> Reglas
+        </button>
+        <button class="nav__link" data-target="miembros">
+          <span class="nav__icon" aria-hidden="true">👥</span> Miembros
+        </button>
+        <button class="nav__link" data-target="unete">
+          <span class="nav__icon" aria-hidden="true">➕</span> Únete
+        </button>
+      </nav>
+
+      <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile" id="mobileMenu" hidden>
+      <button class="mobile__item" data-target="inicio">
+        <img class="mobile__iconImg" src="img/home.png" alt="">
+        Inicio
+      </button>
+      <button class="mobile__item" data-target="sobre-nosotros">
+        <span aria-hidden="true">ℹ️</span> Nosotros
+      </button>
+      <button class="mobile__item" data-target="reglas">
+        <span aria-hidden="true">🛡️</span> Reglas
+      </button>
+      <button class="mobile__item" data-target="miembros">
+        <span aria-hidden="true">👥</span> Miembros
+      </button>
+      <button class="mobile__item" data-target="unete">
+        <span aria-hidden="true">➕</span> Únete
+      </button>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- HERO -->
+    <section id="inicio" class="hero section">
+      <div class="hero__glow hero__glow--left"></div>
+      <div class="hero__glow hero__glow--right"></div>
+
+      <div class="hero__content">
+        <div class="hero__logoWrap">
+          <div class="hero__halo"></div>
+          <img class="hero__logo" src="img/logo.png" alt="NENAS Logo">
+        </div>
+
+        <h1 class="title neon" id="clanName">⚜️ 〔 𝐍𝐄𝐍𝐀𝐒 ʸˢ 〕 ⚜️</h1>
+        <p class="subtitle" id="clanSlogan">Unidos por el juego, el respeto y la comunidad</p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#unete" data-scroll>ÚNETE AHORA</a>
+          <a class="btn btn--ghost" href="#reglas" data-scroll>VER REGLAS</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="sobre-nosotros" class="about section">
+      <div class="container center">
+        <h2 class="h2 purple">¿Quiénes somos?</h2>
+        <p class="quote">
+          "Este clan es un espacio para convivir, compartir y disfrutar Free Fire.
+          Todos son bienvenidos mientras exista respeto y buena vibra.
+          NENAS es más que un clan, es una comunidad."
+        </p>
+
+        <div class="grid3">
+          <article class="card">
+            <div class="card__icon pink" aria-hidden="true">⚡</div>
+            <h3 class="card__title">Pasión Gamer</h3>
+            <p class="card__text">Vivimos por el juego y la estrategia en el campo de batalla.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon purple" aria-hidden="true">🌐</div>
+            <h3 class="card__title">Comunidad Mixta</h3>
+            <p class="card__text">Espacio seguro para hombres y mujeres competitivos.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon cyan" aria-hidden="true">👥</div>
+            <h3 class="card__title">Unidad</h3>
+            <p class="card__text">Más que compañeros, somos una familia unida por FF.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RULES -->
+    <section id="reglas" class="rules section section--alt">
+      <div class="container">
+        <div class="center mb-xl">
+          <h2 class="h2 pink">Reglamento del Clan</h2>
+          <p class="muted">La convivencia es la base de nuestro éxito.</p>
+        </div>
+
+        <div class="gridRules" id="rulesGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- MEMBERS -->
+    <section id="miembros" class="members section">
+      <div class="container">
+        <div class="center mb-xl">
+          <h2 class="h2 purple">Nuestra Comunidad</h2>
+          <p class="muted">Los pilares que mantienen viva la esencia NENAS.</p>
+        </div>
+
+        <div class="gridMembers" id="membersGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- JOIN -->
+    <section id="unete" class="join section section--fade">
+      <div class="container">
+        <div class="join__panel">
+          <div class="join__bolt" aria-hidden="true">⚡</div>
+
+          <div class="center">
+            <h2 class="h1">¿Quieres ser parte del clan?</h2>
+            <p class="join__text">
+              Únete y demuestra tu estilo. Buscamos jugadores comprometidos,
+              respetuosos y con ganas de crecer en equipo.
+            </p>
+
+            <div class="join__actions">
+              <a class="btn btn--wa" href="https://wa.me/51906328464?text=Hola%20quiero%20unirme%20al%20clan%20NENAS"
+                target="_blank" rel="noopener" aria-label="WhatsApp">
+                <img src="img/banner.png" alt="WhatsApp">
+              </a>
+              <button class="btn btn--dc" id="discordBtn" type="button">💬 DISCORD</button>
+              <p class="toast" id="discordToast" hidden>No contamos con Discord ahora.</p>
+            </div>
+
+            <div class="hashtags">#NENAS_YS #FreeFire #GamingCommunity</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <div class="brand__logo">N</div>
+          <div>
+            <div class="footer__name">NENAS CLAN</div>
+            <div class="footer__tag">Unidos • Respeto • Buena vibra</div>
+          </div>
+        </div>
+
+        <div class="footer__icons">
+          <button class="iconBtn" type="button" title="Instagram" aria-label="Instagram">📷</button>
+          <button class="iconBtn" type="button" title="Discord" aria-label="Discord">💬</button>
+          <button class="iconBtn" type="button" title="WhatsApp" aria-label="WhatsApp">📞</button>
+        </div>
+
+        <div class="footer__copy" id="copyright"></div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Floating WhatsApp -->
+  <a class="fab" href="https://wa.me/51906328464?text=Hola%20quiero%20unirme%20al%20clan%20NENAS" target="_blank"
+    rel="noopener" title="Únete por WhatsApp" aria-label="WhatsApp">
+    <img src="img/WhatsApp.png" alt="WhatsApp">
+  </a>
+
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
