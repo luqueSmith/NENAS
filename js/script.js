@@ -11,11 +11,26 @@ const CLAN_RULES = [
 ];
 
 const INITIAL_MEMBERS = [
-  { id: "1", name: "Nena_Leader", role: "Líder", playerId: "1234567890", avatar: "https://picsum.photos/seed/nena1/200/200", rank: "Gran Maestro", level: 75 },
-  { id: "2", name: "Iron_Admin", role: "Administrador", playerId: "9988776655", avatar: "https://picsum.photos/seed/nena2/200/200", rank: "Heroico", level: 68 },
-  { id: "3", name: "Shadow_Nena", role: "Administrador", playerId: "4455667788", avatar: "https://picsum.photos/seed/nena3/200/200", rank: "Diamante IV", level: 62 },
-  { id: "4", name: "Toxic_Vibe", role: "Miembro", playerId: "1112223334", avatar: "https://picsum.photos/seed/nena4/200/200", rank: "Heroico", level: 55 },
+  {
+    id: "1",
+    name: "yirmaris",
+    role: "Lider",
+    playerId: "10056122947",
+    avatar: "img/Yeimi.png",
+    rank: "Heroico",
+    level: 55
+  },
+  {
+    id: "2",
+    name: "∞ Kismet ϟN",
+    role: "Decano",
+    playerId: "882803480",
+    avatar: "img/Smith.png",
+    rank: "Heroico",
+    level: 48
+  }
 ];
+
 
 const SECTIONS = ["inicio", "sobre-nosotros", "reglas", "miembros", "unete"];
 
@@ -44,11 +59,13 @@ function renderMembers() {
       <div class="member__imgWrap">
         <img class="member__img" src="${m.avatar}" alt="${escapeHtml(m.name)}">
       </div>
+
       <div class="member__body">
         <div class="member__top">
           <h3 class="member__name font-gamer">${escapeHtml(m.name)}</h3>
           <span class="badge">${escapeHtml(m.role)}</span>
         </div>
+
         <div class="member__meta">
           <span class="spark" aria-hidden="true">⚡</span>
           <span>Nivel ${Number(m.level)}</span>
@@ -59,7 +76,11 @@ function renderMembers() {
         <div class="member__id">
           ID: <span>${escapeHtml(m.playerId || "—")}</span>
         </div>
+      </div>
 
+      <div class="member__ig">
+        <button class="member__igBtn" type="button" title="Instagram" aria-label="Instagram">📷</button>
+      </div>
     </article>
   `).join("");
 
@@ -205,7 +226,7 @@ function escapeHtml(str) {
 
 /* Init */
 document.addEventListener("DOMContentLoaded", () => {
-    const discordBtn = document.getElementById("discordBtn");
+  const discordBtn = document.getElementById("discordBtn");
   const discordToast = document.getElementById("discordToast");
 
   if (discordBtn && discordToast) {
@@ -220,8 +241,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setClanText();
   renderRules();
-  ;
+  renderMembers();
   setFooterYear();
+
   setupSmoothScroll();
   setupMobileMenu();
   setupActiveSection();
