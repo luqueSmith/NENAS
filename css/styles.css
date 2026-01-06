@@ -779,3 +779,246 @@ body{
   color: #e5e7eb;
   text-shadow: 0 0 10px rgba(168,85,247,.20);
 }
+/* =========================
+   MIEMBROS: tarjeta solo info + icono adelante + modal
+========================= */
+
+.member--tap{
+  cursor: pointer;
+  user-select: none;
+}
+
+.member--tap:focus{
+  outline: 2px solid rgba(236,72,153,.35);
+  outline-offset: 3px;
+}
+
+.member__who{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.member__mini{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 1px solid rgba(168,85,247,.35);
+  box-shadow: 0 0 0 2px rgba(0,0,0,.35);
+  background: rgba(0,0,0,.35);
+  flex: 0 0 auto;
+}
+
+.member__name{
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.member__hint{
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgba(161,161,170,.85);
+}
+
+/* Modal */
+.mModal{
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+.mModal__backdrop{
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.65);
+  backdrop-filter: blur(8px);
+}
+
+.mModal__panel{
+  position: relative;
+  width: min(980px, 100%);
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border: 1px solid rgba(168,85,247,.26);
+  box-shadow: 0 30px 120px rgba(168,85,247,.22);
+  overflow: hidden;
+}
+
+.mModal__close{
+  position:absolute;
+  top: 10px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.35);
+  color: white;
+  cursor: pointer;
+}
+
+.mModal__header{
+  padding: 18px 18px 0;
+}
+
+.mModal__title{
+  font-weight: 900;
+  letter-spacing: .2px;
+  font-size: 16px;
+}
+
+.mModal__sub{
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.mModal__imgWrap{
+  padding: 16px 16px 18px;
+}
+
+.mModal__img{
+  width: 100%;
+  height: min(70vh, 520px);
+  object-fit: contain;
+  border-radius: 18px;
+  background: rgba(0,0,0,.45);
+  border: 1px solid rgba(255,255,255,.08);
+}
+.member--tap{
+  cursor: pointer;
+  user-select: none;
+}
+.member--tap:focus{
+  outline: 2px solid rgba(236,72,153,.35);
+  outline-offset: 3px;
+}
+
+.member__who{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.member__mini{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 1px solid rgba(168,85,247,.35);
+  box-shadow: 0 0 0 2px rgba(0,0,0,.35);
+  background: rgba(0,0,0,.35);
+  flex: 0 0 auto;
+}
+
+.member__hint{
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgba(161,161,170,.85);
+}
+
+/* Modal */
+.mModal{
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+.mModal__backdrop{
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.65);
+  backdrop-filter: blur(8px);
+}
+
+.mModal__panel{
+  position: relative;
+  width: min(980px, 100%);
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border: 1px solid rgba(168,85,247,.26);
+  box-shadow: 0 30px 120px rgba(168,85,247,.22);
+  overflow: hidden;
+}
+
+.mModal__close{
+  position:absolute;
+  top: 10px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.35);
+  color: white;
+  cursor: pointer;
+}
+
+.mModal__header{
+  padding: 18px 18px 0;
+}
+
+.mModal__title{
+  font-weight: 900;
+  letter-spacing: .2px;
+  font-size: 16px;
+}
+
+.mModal__sub{
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.mModal__imgWrap{
+  padding: 16px 16px 18px;
+}
+
+.mModal__img{
+  width: 100%;
+  height: min(70vh, 520px);
+  object-fit: contain;
+  border-radius: 18px;
+  background: rgba(0,0,0,.45);
+  border: 1px solid rgba(255,255,255,.08);
+}
+/* ===== FIX: el atributo hidden debe mandar SIEMPRE ===== */
+.mModal[hidden]{
+  display: none !important;
+}
+
+/* ===== FIX: orden de capas para que la X sea clickeable ===== */
+.mModal{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+.mModal__backdrop{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: auto;
+}
+
+.mModal__panel{
+  position: relative;
+  z-index: 1;           /* encima del backdrop */
+  pointer-events: auto; /* permite clicks */
+}
+
+.mModal__close{
+  z-index: 2;           /* encima de todo */
+  pointer-events: auto;
+}
